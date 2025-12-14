@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1F1F"
+    tools:context=".TechnologiesActivity">
+
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-50dp" />
+
+    <ImageView
+        android:id="@+id/triangle1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_triangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="-30dp"
+        android:layout_marginBottom="-30dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="card_android,card_ios,card_web,card_ml,card_blockchain,card_web3"
+        app:flow_wrapMode="chain"
+        app:flow_maxElementsWrap="2"
+        app:flow_horizontalGap="16dp"
+        app:flow_verticalGap="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/call_us_button"
+        app:layout_constraintVertical_bias="0.2"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_android"
+        style="@style/TechnologyCard">
+        <TextView
+            style="@style/TechnologyCardText"
+            android:text="Android App Dev" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ios"
+        style="@style/TechnologyCard">
+        <TextView
+            style="@style/TechnologyCardText"
+            android:text="IOS App Dev" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_web"
+        style="@style/TechnologyCard">
+        <TextView
+            style="@style/TechnologyCardText"
+            android:text="Web Dev" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ml"
+        style="@style/TechnologyCard">
+        <TextView
+            style="@style/TechnologyCardText"
+            android:text="ML" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_blockchain"
+        style="@style/TechnologyCard">
+        <TextView
+            style="@style/TechnologyCardText"
+            android:text="BlockChain" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_web3"
+        style="@style/TechnologyCard">
+        <TextView
+            style="@style/TechnologyCardText"
+            android:text="Web3" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/call_us_button"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Us"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="64dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
